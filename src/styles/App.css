@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: sans-serif;
+
+}
+
+.app {
+  display: flex;
+  height: 100%;
+  padding: 50px;
+  background-color: blueviolet;
+}
+
+.container {
+  width: 100%;
+}
