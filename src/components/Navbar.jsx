@@ -7,8 +7,10 @@ import userImg from '../assets/user.png';
 export default function Navbar() {
   return (
     <div className="navbar">
-      <img className="userImg" src={ userImg } alt="user img" />
-      <h2>User name</h2>
+      <div className="header">
+        <img className="userImg" src={ userImg } alt="user img" />
+        <h2>User name</h2>
+      </div>
       <Link to="/">
         <p>Create Campaign</p>
       </Link>

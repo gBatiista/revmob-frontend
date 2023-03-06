@@ -1,7 +1,7 @@
 .navbar {
   background-color: rgba(102,37,194,1);
   box-shadow: 4px 4px 20px 0px #341158;
-
+  gap: 15px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -9,18 +9,35 @@
   width: 25%;
 }
 
+.navbar .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
 .navbar a {
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #EB6BA0;
 }
 
 .navbar p {
-  font-family: sans-serif;
+  font-weight: 600;
   color: white;
   border: 2px solid white;
-  border-radius: 15px;
+  border-radius: 5px;
+  min-width: 140px;
   max-width: 150px;
   padding: 5px;
   text-align: center;
+  box-shadow: 2px 5px 10px -1px rgba(0, 0, 0, 0.65);
+
 }
 
 .userImg {
