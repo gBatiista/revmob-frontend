@@ -1,7 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import '../styles/Form.css';
 
-export default function NewCampaign() {
+export default function Form(props) {
+  const {
+    title,
+    setTitle,
+    description,
+    setDescription,
+    imgUrl,
+    setImgUrl,
+  } = props;
+
+  const MAX_TITLE_LENGTH = 20;
+  const MAX_DESCRIPTION_LENGTH = 50;
+
   return (
     <div className="form-container">
       <h2>New Advertise</h2>
@@ -10,7 +24,15 @@ export default function NewCampaign() {
         <div className="div-form">
           <label htmlFor="form-title">
             Title
-            <input type="text" placeholder="Ad Title:" id="form-title" />
+            <input
+              type="text"
+              value={ title }
+              onChange={ ({ target }) => (
+                target.value.length < MAX_TITLE_LENGTH && setTitle(target.value)
+              ) }
+              placeholder="Ad Title:"
+              id="form-title"
+            />
           </label>
         </div>
 
@@ -19,6 +41,11 @@ export default function NewCampaign() {
             Description
             <textarea
               type="text"
+              value={ description }
+              onChange={ ({ target }) => (
+                target.value.length < MAX_DESCRIPTION_LENGTH
+                && setDescription(target.value)
+              ) }
               placeholder="Ad Description:"
               className="form-description"
               id="form-description"
@@ -29,7 +56,13 @@ export default function NewCampaign() {
         <div className="div-form">
           <label htmlFor="form-img">
             Image URL
-            <input type="text" placeholder="Ad Image URL:" id="form-img" />
+            <input
+              type="text"
+              value={ imgUrl }
+              onChange={ ({ target }) => setImgUrl(target.value) }
+              placeholder="Ad Image URL:"
+              id="form-img"
+            />
           </label>
         </div>
 
@@ -66,3 +99,12 @@ export default function NewCampaign() {
     </div>
   );
 }
+
+Form.propTypes = {
+  title: PropTypes.string.isRequired,
+  setTitle: PropTypes.func.isRequired,
+  description: PropTypes.string.isRequired,
+  setDescription: PropTypes.func.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+  setImgUrl: PropTypes.func.isRequired,
+};
