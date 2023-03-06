@@ -13,6 +13,10 @@
   font-size: 30px;
   margin-top: 40px;
   margin-bottom: 45px;
+  /* border-bottom: 1px solid black; */
+  border-radius: 10px;
+  padding: 0 10px;
+  box-shadow: 2px 2px 3px 2px #341158;
 }
 
 .preview-container .preview-ad {

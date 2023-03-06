@@ -12,6 +12,9 @@
 .form-container h2 {
   color: white;
   font-size: 30px;
+  box-shadow: 2px 2px 3px 2px #341158;
+  border-radius: 10px;
+  padding: 0 10px;
 }
 
 .form-container .div-form {
