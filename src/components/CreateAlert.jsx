@@ -24,6 +24,15 @@ export default function CreateAlert(props) {
           }
 
           {
+            type === 'info' && (
+              <>
+                <img src={ negative } alt="Done" />
+                <p>Please fill in at least title and bid</p>
+              </>
+            )
+          }
+
+          {
             type === 'error' && (
               (
                 <>

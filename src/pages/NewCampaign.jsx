@@ -17,9 +17,24 @@ export default function NewCampaign() {
   const [country, setCountry] = useState('ALL');
   const [loading, setLoading] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
+  const [showInfoAlert, setShowInfoAlert] = useState(false);
   const [requestError, setRequestError] = useState(false);
 
+  const resetStates = () => {
+    setTitle('');
+    setDescription('');
+    setImgUrl('');
+    setConversionType('CPM');
+    setBid(0);
+    setCountry('ALL');
+  };
+
   const createAd = async () => {
+    if (title.length < 1 || bid <= 0) {
+      setShowInfoAlert(true);
+      return;
+    }
+
     const ad = {
       title,
       description,
@@ -38,6 +53,7 @@ export default function NewCampaign() {
     }
     setLoading(false);
     setShowAlert(true);
+    resetStates();
   };
 
   return (
@@ -46,9 +62,18 @@ export default function NewCampaign() {
         loading && <Loading />
       }
       {
+        showInfoAlert && <CreateAlert
+          type="info"
+          closeAlert={ () => setShowInfoAlert(false) }
+        />
+      }
+      {
         showAlert && <CreateAlert
           type={ !requestError ? 'success' : 'error' }
-          closeAlert={ () => setShowAlert(false) }
+          closeAlert={ () => {
+            setShowAlert(false);
+            setRequestError(false);
+          } }
         />
       }
       <Form
