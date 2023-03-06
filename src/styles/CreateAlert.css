@@ -4,7 +4,7 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.644);
   min-width: 100%;
-  min-height: 870px;
+  min-height: 875px;
   z-index: 1;
 }
 
@@ -28,6 +28,12 @@
   border-radius: 50%;
   height: 100px;
   width: 100px;
+}
+
+.alert-background .loading {
+  border: none;
+  height: 200px;
+  width: 200px;
 }
 
 .alert-background .alert {

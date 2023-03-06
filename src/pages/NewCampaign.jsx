@@ -4,6 +4,7 @@ import axios from 'axios';
 import Form from '../components/Form';
 import CampaignCard from '../components/CampaignCard';
 import CreateAlert from '../components/CreateAlert';
+import Loading from '../components/Loading';
 
 import '../styles/NewCampaign.css';
 
@@ -42,11 +43,11 @@ export default function NewCampaign() {
   return (
     <div className="new-campaign-container">
       {
-        loading && <p>Loading</p>
+        loading && <Loading />
       }
       {
         showAlert && <CreateAlert
-          type={ !requestError && 'success' }
+          type={ !requestError ? 'success' : 'error' }
           closeAlert={ () => setShowAlert(false) }
         />
       }

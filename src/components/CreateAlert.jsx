@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import done from '../assets/accept.png';
 import negative from '../assets/negative.png';
 
@@ -14,19 +15,25 @@ export default function CreateAlert(props) {
         <div className="alert">
 
           {
-            type === 'success' ? (
+            type === 'success' && (
               <>
                 <img src={ done } alt="Done" />
                 <p>Advertise created successfully</p>
               </>
             )
-              : (
+          }
+
+          {
+            type === 'error' && (
+              (
                 <>
                   <img src={ negative } alt="Error" />
                   <p>Something went wrong</p>
                 </>
               )
+            )
           }
+
           <button onClick={ closeAlert }>Done</button>
         </div>
       </div>
