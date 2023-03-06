@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Form from '../components/Form';
 import CampaignCard from '../components/CampaignCard';
+import CreateAlert from '../components/CreateAlert';
 
 import '../styles/NewCampaign.css';
 
@@ -13,7 +14,9 @@ export default function NewCampaign() {
   const [conversionType, setConversionType] = useState('CPM');
   const [bid, setBid] = useState(0);
   const [country, setCountry] = useState('ALL');
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [requestError, setRequestError] = useState(false);
 
   const createAd = async () => {
     const ad = {
@@ -25,18 +28,28 @@ export default function NewCampaign() {
       country,
     };
     try {
+      setLoading(true);
       const response = await axios.post('http://localhost:3003/', ad);
-      const { _id } = response.data;
-      console.log(_id);
+      console.log(response);
     } catch (error) {
       console.error(error);
+      if (error) setRequestError(true);
     }
-
-    // console.log(result);
+    setLoading(false);
+    setShowAlert(true);
   };
 
   return (
     <div className="new-campaign-container">
+      {
+        loading && <p>Loading</p>
+      }
+      {
+        showAlert && <CreateAlert
+          type={ !requestError && 'success' }
+          closeAlert={ () => setShowAlert(false) }
+        />
+      }
       <Form
         title={ title }
         setTitle={ setTitle }
