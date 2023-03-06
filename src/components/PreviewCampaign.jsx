@@ -5,6 +5,7 @@ import icon from '../assets/user.png';
 import share from '../assets/share.png';
 import like from '../assets/like.png';
 import comment from '../assets/comment.png';
+import reactions from '../assets/reactions.png';
 
 export default function PreviewCampaign() {
   return (
@@ -28,6 +29,10 @@ export default function PreviewCampaign() {
           <div className="ad-btn">
             <p>Learn More</p>
           </div>
+        </div>
+        <div className="ad-reactions">
+          <img src={ reactions } alt="reactions" />
+          <div className="reaction-blur" />
         </div>
         <div className="ad-social">
           <div className="social-group">

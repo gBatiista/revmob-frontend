@@ -65,7 +65,7 @@
 
 .preview-container .ad-social {
   border-top: 2px solid rgba(0, 0, 0, 0.2);
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
   justify-content: space-between;
   padding: 10px 40px;
@@ -83,6 +83,26 @@
   align-items: center;
   padding-inline: 15px;
   height: 30px;
+}
+
+.preview-container .ad-reactions {
+  margin-top: 5px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.preview-container .ad-reactions img {
+  height: 20px;
+  width: 20px;
+}
+
+.preview-container .reaction-blur {
+  width: 80px;
+  height: 13px;
+  border-radius: 3px;
+  background-color: rgb(230, 230, 230);
 }
 
 .preview-container .social-icon {
