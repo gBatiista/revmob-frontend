@@ -22,10 +22,6 @@ export default function Navbar() {
       <Link to="/">
         <p>Delete Campaign</p>
       </Link>
-
-      <Link to="/best">
-        <p>Best Campaign</p>
-      </Link>
     </div>
   );
 }
