@@ -15,6 +15,14 @@ export default function Navbar() {
         <p>Create Campaign</p>
       </Link>
 
+      <Link to="/">
+        <p>Edit Campaign</p>
+      </Link>
+
+      <Link to="/">
+        <p>Delete Campaign</p>
+      </Link>
+
       <Link to="/best">
         <p>Best Campaign</p>
       </Link>
