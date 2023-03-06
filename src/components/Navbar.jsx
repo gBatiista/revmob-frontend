@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 
-import userImg from '../assets/user.png';
+import logo from '../assets/logo.png';
 
 export default function Navbar() {
   return (
     <div className="navbar">
       <div className="header">
-        <img className="userImg" src={ userImg } alt="user img" />
+        <img className="logo" src={ logo } alt="user img" />
         <h2>User name</h2>
       </div>
       <Link to="/">
