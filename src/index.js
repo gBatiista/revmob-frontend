@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         element: <NewCampaign />,
       },
       {
-        path: '/best',
+        path: '/campaigns',
         element: <BestCampaign />,
       },
     ],

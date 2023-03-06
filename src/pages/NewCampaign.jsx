@@ -7,6 +7,8 @@ import CreateAlert from '../components/CreateAlert';
 import Loading from '../components/Loading';
 
 import '../styles/NewCampaign.css';
+import Navbar from '../components/Navbar';
+import Header from '../components/Header';
 
 export default function NewCampaign() {
   const [title, setTitle] = useState('');
@@ -57,49 +59,55 @@ export default function NewCampaign() {
   };
 
   return (
-    <div className="new-campaign-container">
-      {
-        loading && <Loading />
-      }
-      {
-        showInfoAlert && <CreateAlert
-          type="info"
-          closeAlert={ () => setShowInfoAlert(false) }
-        />
-      }
-      {
-        showAlert && <CreateAlert
-          type={ !requestError ? 'success' : 'error' }
-          closeAlert={ () => {
-            setShowAlert(false);
-            setRequestError(false);
-          } }
-        />
-      }
-      <Form
-        title={ title }
-        setTitle={ setTitle }
-        description={ description }
-        setDescription={ setDescription }
-        imgUrl={ imgUrl }
-        setImgUrl={ setImgUrl }
-        bid={ bid }
-        setBid={ setBid }
-        conversionType={ conversionType }
-        setConversionType={ setConversionType }
-        country={ country }
-        setCountry={ setCountry }
-        createAd={ createAd }
-      />
+    <div className="nav-container">
+      <Navbar location="advertiser" />
+      <div>
+        <Header />
+        <div className="new-campaign-container">
+          {
+            loading && <Loading />
+          }
+          {
+            showInfoAlert && <CreateAlert
+              type="info"
+              closeAlert={ () => setShowInfoAlert(false) }
+            />
+          }
+          {
+            showAlert && <CreateAlert
+              type={ !requestError ? 'success' : 'error' }
+              closeAlert={ () => {
+                setShowAlert(false);
+                setRequestError(false);
+              } }
+            />
+          }
+          <Form
+            title={ title }
+            setTitle={ setTitle }
+            description={ description }
+            setDescription={ setDescription }
+            imgUrl={ imgUrl }
+            setImgUrl={ setImgUrl }
+            bid={ bid }
+            setBid={ setBid }
+            conversionType={ conversionType }
+            setConversionType={ setConversionType }
+            country={ country }
+            setCountry={ setCountry }
+            createAd={ createAd }
+          />
 
-      <div className="preview-container">
-        <h2>Preview</h2>
+          <div className="preview-container">
+            <h2>Preview</h2>
 
-        <CampaignCard
-          title={ title }
-          description={ description }
-          imgUrl={ imgUrl }
-        />
+            <CampaignCard
+              title={ title }
+              description={ description }
+              imgUrl={ imgUrl }
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

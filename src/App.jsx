@@ -1,17 +1,14 @@
+// import { useEffect } from 'react';
+
 import { Outlet } from 'react-router-dom';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
+// import Header from './components/Header';
 import './styles/App.css';
 
 function App() {
   return (
     <div className="background">
       <div className="app">
-        <Navbar />
-        <div className="container">
-          <Header />
-          <Outlet />
-        </div>
+        <Outlet />
       </div>
     </div>
   );

@@ -6,11 +6,11 @@ export default function Header() {
   return (
     <div className="header-container">
       <Link to="/">
-        <p>I&apos;m Publisher</p>
+        <p>I&apos;m Advertiser</p>
       </Link>
 
-      <Link to="/">
-        <p>I&apos;m Advertiser</p>
+      <Link to="/campaigns">
+        <p>I&apos;m Publisher</p>
       </Link>
     </div>
   );
