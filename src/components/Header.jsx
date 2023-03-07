@@ -1,17 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../styles/Header.css';
 
-export default function Header() {
+export default function Header(props) {
+  const { on } = props;
+
   return (
     <div className="header-container">
-      <Link to="/">
+      <Link className={ (on === 'advertiser') && 'on' } to="/">
         <p>I&apos;m Advertiser</p>
       </Link>
 
-      <Link to="/campaigns">
+      <Link className={ (on === 'publisher') && 'on' } to="/campaigns">
         <p>I&apos;m Publisher</p>
       </Link>
     </div>
   );
 }
+
+Header.propTypes = {
+  on: PropTypes.string.isRequired,
+};

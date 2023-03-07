@@ -45,10 +45,10 @@ export default function AllCampaigns() {
   };
 
   return (
-    <div className="nav-container all-container">
+    <div className="nav-container">
       <Navbar location="publisher" />
       <div>
-        <Header />
+        <Header on="publisher" />
         <div className="container">
 
           <div className="div-left">

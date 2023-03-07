@@ -18,7 +18,7 @@ export default function CreateAlert(props) {
             type === 'success' && (
               <>
                 <img src={ done } alt="Done" />
-                <p>Advertise created successfully</p>
+                <p>Campaign created successfully</p>
               </>
             )
           }

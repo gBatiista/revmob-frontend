@@ -25,7 +25,7 @@ export default function Form(props) {
 
   return (
     <div className="form-container">
-      <h2>New Advertise</h2>
+      <h2>New Campaign</h2>
 
       <form>
         <div className="div-form">
@@ -117,7 +117,7 @@ export default function Form(props) {
         </label>
 
         <div className="div-btn">
-          <button type="button" onClick={ createAd }>Create Advertise</button>
+          <button type="button" onClick={ createAd }>Create Campaign</button>
         </div>
       </form>
     </div>

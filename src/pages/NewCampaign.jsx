@@ -60,7 +60,7 @@ export default function NewCampaign() {
     <div className="nav-container">
       <Navbar location="advertiser" />
       <div>
-        <Header />
+        <Header on="advertiser" />
         <div className="container">
           {
             loading && <Loading />

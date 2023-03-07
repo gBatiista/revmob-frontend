@@ -28,3 +28,7 @@
 .header-container a:hover {
   background-color: #EB6BA0;
 }
+
+.header-container .on {
+  background-color: #EB6BA0;
+}

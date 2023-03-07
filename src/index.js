@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import Provider from './context/Provider';
 import AllCampaigns from './pages/AllCampaigns';
+import DeleteCampaign from './pages/DeleteCampaign';
 import Login from './pages/Login';
 import NewCampaign from './pages/NewCampaign';
 import SeeCampaigns from './pages/SeeCampaigns';
@@ -13,12 +14,16 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
+        path: '/login',
+        element: <Login />,
+      },
+      {
         path: '/',
         element: <NewCampaign />,
       },
       {
-        path: '/login',
-        element: <Login />,
+        path: '/delete',
+        element: <DeleteCampaign />,
       },
       {
         path: '/campaigns',

@@ -24,7 +24,7 @@ export default function SeeCampaigns() {
     <div className="nav-container">
       <Navbar location="publisher" />
       <div>
-        <Header />
+        <Header on="publisher" />
         <div className="container">
           <BestCampaign getCampaign={ getCampaign } setCountry={ setCountry } />
 
