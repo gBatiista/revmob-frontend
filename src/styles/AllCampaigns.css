@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
 
+  padding: 0 25px;
   width: 15%;
 }
 
@@ -18,10 +19,8 @@
   justify-content: center;
   align-items: center;
   width: 15%;
-}
+  padding: 0 25px;
 
-.all-campaigns-container {
-  width: 600px;
 }
 
 .div-left button,
@@ -37,6 +36,7 @@
   cursor: pointer;
 }
 
-.ad-img {
-  width: 350px;
+.nav-container {
+  justify-content: center;
+  width: 100%;
 }

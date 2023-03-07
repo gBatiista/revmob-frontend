@@ -13,9 +13,9 @@ import reactions from '../assets/reactions.png';
 export default function CampaignCard({
   bid = undefined,
   conversionType = undefined,
-  title,
-  description,
-  imgUrl,
+  title = undefined,
+  description = undefined,
+  imgUrl = undefined,
 }) {
   return (
     <div className="preview-info">
@@ -73,9 +73,9 @@ export default function CampaignCard({
 }
 
 CampaignCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  imgUrl: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  imgUrl: PropTypes.string,
   conversionType: PropTypes.string,
   bid: PropTypes.number,
 };
