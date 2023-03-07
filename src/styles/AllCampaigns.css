@@ -1,6 +1,6 @@
 .arrows {
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
 }
 
 .div-right {
@@ -11,14 +11,14 @@
   align-items: center;
 
   padding: 0 25px;
-  width: 15%;
+  width: 100%;
 }
 
 .div-left {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15%;
+  width: 100%;
   padding: 0 25px;
 
 }
@@ -34,9 +34,4 @@
 .div-right button:hover {
   scale: 1.4;
   cursor: pointer;
-}
-
-.nav-container {
-  justify-content: center;
-  width: 100%;
 }
