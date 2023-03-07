@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
+import Provider from './context/Provider';
 import AllCampaigns from './pages/AllCampaigns';
+import Login from './pages/Login';
 import NewCampaign from './pages/NewCampaign';
 import SeeCampaigns from './pages/SeeCampaigns';
 
@@ -13,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <NewCampaign />,
+      },
+      {
+        path: '/login',
+        element: <Login />,
       },
       {
         path: '/campaigns',
@@ -29,7 +35,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={ router } />
+    <Provider>
+      <RouterProvider router={ router } />
+    </Provider>
   </React.StrictMode>,
 );
 
