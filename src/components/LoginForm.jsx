@@ -5,10 +5,11 @@ import AppContext from '../context/AppContext';
 
 export default function LoginForm() {
   const { user, setUser } = useContext(AppContext);
-
+  const ENTER_KEY_CODE = 13;
   const navigate = useNavigate();
 
-  const signIn = () => {
+  const signIn = (e) => {
+    e.preventDefault();
     navigate('/');
   };
 
@@ -19,7 +20,8 @@ export default function LoginForm() {
           type="text"
           name="login"
           value={ user }
-          onChange={ ({ target }) => setUser(target.value) }
+          onChange={ (e) => setUser(e.target.value) }
+          onKeyDown={ (e) => (e.keyCode === ENTER_KEY_CODE) && signIn(e) }
           className="input-login"
           placeholder="Username"
         />
