@@ -8,11 +8,11 @@ export default function Header(props) {
 
   return (
     <div className="header-container">
-      <Link className={ (on === 'advertiser') && 'on' } to="/">
+      <Link className={ (on === 'advertiser') ? 'on' : undefined } to="/">
         <p>I&apos;m Advertiser</p>
       </Link>
 
-      <Link className={ (on === 'publisher') && 'on' } to="/campaigns">
+      <Link className={ (on === 'publisher') ? 'on' : undefined } to="/campaigns">
         <p>I&apos;m Publisher</p>
       </Link>
     </div>

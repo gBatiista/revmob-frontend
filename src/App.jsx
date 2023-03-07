@@ -9,9 +9,9 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // if (user === '') {
-    //   navigate('/login');
-    // }
+    if (user === '') {
+      navigate('/login');
+    }
   }, [navigate, user]);
 
   return (

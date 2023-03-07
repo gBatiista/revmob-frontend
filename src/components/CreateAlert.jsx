@@ -6,9 +6,12 @@ import negative from '../assets/negative.png';
 
 import '../styles/CreateAlert.css';
 
-export default function CreateAlert(props) {
-  const { closeAlert, type } = props;
-
+export default function CreateAlert({
+  closeAlert,
+  type,
+  id = '',
+  setId = () => {},
+}) {
   return (
     <div className="alert-background">
       <div className="alert-container">
@@ -19,6 +22,16 @@ export default function CreateAlert(props) {
               <>
                 <img src={ done } alt="Done" />
                 <p>Campaign created successfully</p>
+                <p className="alert-campaign-id">{ `Save this ID: ${id}` }</p>
+              </>
+            )
+          }
+
+          {
+            type === 'delete' && (
+              <>
+                <img src={ done } alt="Done" />
+                <p>Campaign deleted successfully</p>
               </>
             )
           }
@@ -43,7 +56,15 @@ export default function CreateAlert(props) {
             )
           }
 
-          <button onClick={ closeAlert }>Done</button>
+          <button
+            onClick={ () => {
+              closeAlert();
+              setId('');
+            } }
+          >
+            Done
+
+          </button>
         </div>
       </div>
     </div>
@@ -53,4 +74,6 @@ export default function CreateAlert(props) {
 CreateAlert.propTypes = {
   closeAlert: PropTypes.func.isRequired,
   type: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  setId: PropTypes.func,
 };

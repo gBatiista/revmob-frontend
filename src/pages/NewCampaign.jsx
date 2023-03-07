@@ -20,6 +20,7 @@ export default function NewCampaign() {
   const [showAlert, setShowAlert] = useState(false);
   const [showInfoAlert, setShowInfoAlert] = useState(false);
   const [requestError, setRequestError] = useState(false);
+  const [id, setId] = useState('');
 
   const resetStates = () => {
     setTitle('');
@@ -46,7 +47,8 @@ export default function NewCampaign() {
     };
     try {
       setLoading(true);
-      await axios.post('http://localhost:3003/', ad);
+      const { data: { _id } } = await axios.post('http://localhost:3003/', ad);
+      setId(_id);
     } catch (error) {
       console.error(error);
       if (error) setRequestError(true);
@@ -74,6 +76,8 @@ export default function NewCampaign() {
           {
             showAlert && <CreateAlert
               type={ !requestError ? 'success' : 'error' }
+              id={ id }
+              setId={ setId }
               closeAlert={ () => {
                 setShowAlert(false);
                 setRequestError(false);

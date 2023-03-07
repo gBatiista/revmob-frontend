@@ -67,3 +67,8 @@
   background-color: #EB6BA0;
   cursor: pointer;
 }
+
+.alert-campaign-id {
+  background-color: white;
+  padding: 5px;
+}
