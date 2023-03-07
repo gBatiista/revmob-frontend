@@ -46,8 +46,7 @@ export default function NewCampaign() {
     };
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:3003/', ad);
-      console.log(response);
+      await axios.post('http://localhost:3003/', ad);
     } catch (error) {
       console.error(error);
       if (error) setRequestError(true);
