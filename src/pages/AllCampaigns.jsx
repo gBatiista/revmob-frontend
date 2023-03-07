@@ -67,6 +67,7 @@ export default function AllCampaigns() {
                   imgUrl={ campaigns[index].image }
                   bid={ campaigns[index].bid }
                   conversionType={ campaigns[index].conversion_type }
+                  country={ campaigns[index].country }
                 />
               )
             }

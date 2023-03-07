@@ -16,6 +16,7 @@ export default function CampaignCard({
   title = undefined,
   description = undefined,
   imgUrl = undefined,
+  country = undefined,
 }) {
   return (
     <div className="preview-info">
@@ -61,9 +62,14 @@ export default function CampaignCard({
 
       {
         (bid && conversionType) && (
-          <div className="info-container">
-            <p className="campaign-info">{ `Bid: $ ${bid}` }</p>
-            <p className="campaign-info">{ `Conversion: ${conversionType}` }</p>
+          <div>
+            <div className="info-container">
+              <p className="campaign-info">{ `Bid: $ ${bid}` }</p>
+              <p className="campaign-info">{ `Conversion: ${conversionType}` }</p>
+            </div>
+            <div>
+              <p className="campaign-info country-info">{ `Country: ${country}` }</p>
+            </div>
           </div>
         )
       }
@@ -78,4 +84,5 @@ CampaignCard.propTypes = {
   imgUrl: PropTypes.string,
   conversionType: PropTypes.string,
   bid: PropTypes.number,
+  country: PropTypes.string,
 };

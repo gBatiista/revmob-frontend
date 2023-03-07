@@ -36,6 +36,7 @@ export default function SeeCampaigns() {
               imgUrl={ campaign.image }
               conversionType={ campaign.conversion_type }
               bid={ campaign.bid }
+              country={ campaign.country }
             />
           </div>
         </div>
