@@ -1,4 +1,4 @@
-.new-campaign-container {
+.container {
   display: flex;
   box-shadow: 4px 4px 20px 0px #341158;
   background: linear-gradient(90deg, rgba(102,37,194,1) 0%, rgba(172,74,176,1) 50%, rgba(238,108,159,1) 100%);
@@ -7,7 +7,6 @@
   justify-content: center;
   align-items: center;
   border-radius: 0 0 20px 0;
-
 }
 
 .nav-container {

@@ -1,3 +1,10 @@
+.preview-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .preview-container {
   height: 100%;
   width: 50%;
@@ -20,6 +27,7 @@
 .preview-container .preview-ad {
   background-color: white;
   box-shadow: 4px 4px 20px 0px #341158;
+  margin-bottom: 10px;
 
   border-radius: 10px;
   width: 80%;
@@ -124,4 +132,19 @@
   width: 20px;
 }
 
+.preview-container .campaign-info {
+  padding: 5px;
+  text-align: center;
+  font-weight: 600;
+
+  box-shadow: 2px 5px 10px -1px rgba(0, 0, 0, 0.65);
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+}
+
+.preview-container .info-container {
+  display: flex;
+  gap: 5px;
+}
 

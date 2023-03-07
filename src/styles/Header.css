@@ -4,7 +4,7 @@
   align-items: center;
   gap: 30px;
   height: 70px;
-  box-shadow: 4px 4px 20px 0px #341158;
+  /* box-shadow: 4px 4px 20px 0px #341158; */
   border-radius: 0 20px 0 0;
   background: linear-gradient(90deg, rgba(102,37,194,1) 0%, rgba(172,74,176,1) 50%, rgba(238,108,159,1) 100%);
 }

@@ -1,0 +1,54 @@
+.best-campaign-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  padding: 40px 25px;
+}
+
+.best-campaign-container h2 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 45px;
+  border-radius: 10px;
+  padding: 0 10px;
+  box-shadow: 2px 5px 10px -1px rgba(0, 0, 0, 0.65);
+}
+
+.best-campaign-container select {
+  height: 37px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 2px 5px 10px -1px rgba(0, 0, 0, 0.65);
+  border: none;
+  text-align: center;
+}
+
+.navbar {
+  width: 20%;
+}
+
+.get-campaign-btn {
+  margin-top: 50px;
+  height: 37px;
+  width: 100%;
+  max-width: 355px;
+  padding: 0 10px;
+
+  box-shadow: 2px 5px 10px -1px rgba(0, 0, 0, 0.65);
+  border: 2px solid white;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #6D27B8;
+  transition: 0.3s;
+}
+
+.get-campaign-btn:hover {
+  background-color: #EB6BA0;
+  cursor: pointer;
+}

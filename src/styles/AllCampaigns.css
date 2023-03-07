@@ -1,0 +1,42 @@
+.arrows {
+  height: 50px;
+  width: 50px;
+}
+
+.div-right {
+  border-left: 4px dotted rgba(0, 0, 0, 0.527);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 15%;
+}
+
+.div-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+}
+
+.all-campaigns-container {
+  width: 600px;
+}
+
+.div-left button,
+.div-right button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+}
+
+.div-left button:hover,
+.div-right button:hover {
+  scale: 1.4;
+  cursor: pointer;
+}
+
+.ad-img {
+  width: 350px;
+}

@@ -6,7 +6,6 @@ import CampaignCard from '../components/CampaignCard';
 import CreateAlert from '../components/CreateAlert';
 import Loading from '../components/Loading';
 
-import '../styles/NewCampaign.css';
 import Navbar from '../components/Navbar';
 import Header from '../components/Header';
 
@@ -63,7 +62,7 @@ export default function NewCampaign() {
       <Navbar location="advertiser" />
       <div>
         <Header />
-        <div className="new-campaign-container">
+        <div className="container">
           {
             loading && <Loading />
           }

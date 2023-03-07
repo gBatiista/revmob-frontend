@@ -1,8 +1,6 @@
-// import { useEffect } from 'react';
-
 import { Outlet } from 'react-router-dom';
-// import Header from './components/Header';
 import './styles/App.css';
+import './styles/Container.css';
 
 function App() {
   return (

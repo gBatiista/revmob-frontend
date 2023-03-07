@@ -89,7 +89,7 @@ export default function Form(props) {
 
         <div className="div-form">
           <label htmlFor="form-bid">
-            Bid
+            Bid $
             <input
               type="number"
               value={ bid }
@@ -109,10 +109,10 @@ export default function Form(props) {
             id="form-country"
           >
             <option value="ALL">ALL</option>
-            <option value="BR">BR</option>
-            <option value="USA">USA</option>
-            <option value="PT">PT</option>
-            <option value="ES">ES</option>
+            <option value="BR">Brazil</option>
+            <option value="USA">United States</option>
+            <option value="PT">Portugal</option>
+            <option value="ES">Spain</option>
           </select>
         </label>
 

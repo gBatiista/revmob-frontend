@@ -15,18 +15,23 @@ export default function Navbar(props) {
       </div>
       {
         location === 'advertiser' && (
+          <Link to="/">
+            <p>Create Campaign</p>
+          </Link>
+        )
+      }
+
+      {
+        location === 'publisher' && (
           <>
-            <Link to="/">
-              <p>Create Campaign</p>
+            <Link to="/campaigns">
+              <p>Best Campaign</p>
             </Link>
 
-            <Link to="/">
-              <p>Edit Campaign</p>
+            <Link to="/campaigns/all">
+              <p>All Campaigns</p>
             </Link>
 
-            <Link to="/">
-              <p>Delete Campaign</p>
-            </Link>
           </>
         )
       }

@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
-import BestCampaign from './components/BestCampaign';
+import AllCampaigns from './pages/AllCampaigns';
 import NewCampaign from './pages/NewCampaign';
+import SeeCampaigns from './pages/SeeCampaigns';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/campaigns',
-        element: <BestCampaign />,
+        element: <SeeCampaigns />,
+      },
+      {
+        path: '/campaigns/all',
+        element: <AllCampaigns />,
       },
     ],
   },
