@@ -37,7 +37,7 @@ export default function Form(props) {
               onChange={ ({ target }) => (
                 target.value.length < MAX_TITLE_LENGTH && setTitle(target.value)
               ) }
-              placeholder="Ad Title:"
+              placeholder="Campaign Title:"
               id="form-title"
             />
           </label>
@@ -53,7 +53,7 @@ export default function Form(props) {
                 target.value.length < MAX_DESCRIPTION_LENGTH
                 && setDescription(target.value)
               ) }
-              placeholder="Ad Description:"
+              placeholder="Campaign Description:"
               className="form-description"
               id="form-description"
             />
@@ -67,7 +67,7 @@ export default function Form(props) {
               type="text"
               value={ imgUrl }
               onChange={ ({ target }) => setImgUrl(target.value) }
-              placeholder="Ad Image URL:"
+              placeholder="Campaign Image URL:"
               id="form-img"
             />
           </label>
