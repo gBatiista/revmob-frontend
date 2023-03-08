@@ -14,7 +14,7 @@ export default function DeleteCampaign() {
 
   const deleteAd = async () => {
     try {
-      await axios.delete('http://localhost:3003', { data: { id } });
+      await axios.delete('https://revmob-backend.onrender.com/', { data: { id } });
     } catch (error) {
       console.error(error);
       setRequestError(true);

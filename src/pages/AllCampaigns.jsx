@@ -12,15 +12,18 @@ import right from '../assets/right-arrow.png';
 import '../styles/AllCampaigns.css';
 
 export default function AllCampaigns() {
-  const [campaigns, setCampaigns] = useState();
+  const [campaigns, setCampaigns] = useState([]);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const getAll = async () => {
-      const URL = 'http://localhost:3003/fetch/all';
+      const URL = 'https://revmob-backend.onrender.com/fetch/all';
 
       const { data } = await axios.get(URL);
-      setCampaigns(data);
+
+      if (data.length !== 0) {
+        setCampaigns(data);
+      }
     };
 
     getAll();
@@ -60,7 +63,7 @@ export default function AllCampaigns() {
           <div className="preview-container all-campaigns-container">
             <h2>All Campaigns</h2>
             {
-              campaigns && (
+              campaigns.length !== 0 && (
                 <CampaignCard
                   title={ campaigns[index].title }
                   description={ campaigns[index].description }

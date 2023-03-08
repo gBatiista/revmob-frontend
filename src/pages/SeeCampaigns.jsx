@@ -12,7 +12,7 @@ export default function SeeCampaigns() {
   const [campaign, setCampaign] = useState({});
 
   const getCampaign = async () => {
-    let URL = 'http://localhost:3003/fetch';
+    let URL = 'https://revmob-backend.onrender.com/fetch';
 
     if (country !== 'ALL') URL += `?country=${country}`;
 
