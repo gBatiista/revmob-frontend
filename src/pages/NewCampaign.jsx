@@ -47,7 +47,7 @@ export default function NewCampaign() {
     };
     try {
       setLoading(true);
-      const { data: { _id } } = await axios.post('https://revmob-backend.onrender.com/', ad);
+      const { data: { _id } } = await axios.post('https://revmob-be.fly.dev/', ad);
       setId(_id);
     } catch (error) {
       console.error(error);

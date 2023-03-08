@@ -17,7 +17,7 @@ export default function AllCampaigns() {
 
   useEffect(() => {
     const getAll = async () => {
-      const URL = 'https://revmob-backend.onrender.com/fetch/all';
+      const URL = 'https://revmob-be.fly.dev/fetch/all';
 
       const { data } = await axios.get(URL);
 
