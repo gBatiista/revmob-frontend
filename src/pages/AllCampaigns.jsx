@@ -19,12 +19,7 @@ export default function AllCampaigns() {
     const getAll = async () => {
       const URL = 'https://revmob-backend.onrender.com/fetch/all';
 
-      const { data } = await axios.get(URL, {
-        headers: { 
-          'Access-Control-Allow-Origin' : '*',
-          'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-        },
-      });
+      const { data } = await axios.get(URL);
 
       if (data.length !== 0) {
         setCampaigns(data);
